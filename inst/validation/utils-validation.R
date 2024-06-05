@@ -4,7 +4,7 @@
 #' 2. Copy that variable and the contents of if block to tests/testthat/setup.R
 #' (If you are using the template this may already be in place for you)
 
-package_name <- "dv.manager"
+package_name <- "dv.templates"
 
 if (FALSE) {
   # validation (S)

@@ -1,3 +1,7 @@
+pkg_name <- read.dcf("DESCRIPTION")[, "Package"]
+pkg_version <- read.dcf("DESCRIPTION")[, "Version"]
+test_results <- tibble::as_tibble(devtools::test())
+
 local({
   # This is evaluated inside a local because, otherwise, all the variables created in the chunks of the rendered
   # document leak into the environment
