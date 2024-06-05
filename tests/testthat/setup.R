@@ -4,16 +4,8 @@ vdoc <- local({
   # package_name is used # INSIDE # the sourced file below
   #                      ##########  
   package_name <- read.dcf("../../DESCRIPTION")[, "Package"]
-  message("##############")
-  message("PKG")
-  message(package_name)
-  message("##############")
-
-  source(
-  system.file("validation", "utils-validation.R", package = package_name, mustWork = TRUE),
-  local = TRUE
-)[["value"]]
-
+  utils_file_path <- system.file("validation", "utils-validation.R", package = package_name, mustWork = TRUE)
+  source(utils_file_path, local = TRUE)[["value"]]
 })
 specs <- vdoc[["specs"]]
 #  validation (F)
